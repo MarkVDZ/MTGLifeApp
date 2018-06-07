@@ -18,14 +18,47 @@ public class LifeCounter : MonoBehaviour {
 		
 	}
 
-	public void LifeUp(){
-		life++;
-		lifeText.text = life.ToString();
+    private void UpdateLifeTotal()
+    {
+        lifeText.text = life.ToString();
+    }
+
+	public void LifeUp(int amount){
+        switch (amount)
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                life++;
+                break;
+
+            case 5:
+                life += 5;
+                break;
+            
+        }
+        UpdateLifeTotal();
 	}
 
-	public void LifeDown(){
-		life--;
-		lifeText.text = life.ToString();
+	public void LifeDown(int amount){
+        switch (amount)
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                life--;
+                break;
+
+            case 5:
+                life -= 5;
+                break;
+
+        }
+        UpdateLifeTotal();
 	}
 
 }

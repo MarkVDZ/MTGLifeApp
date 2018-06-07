@@ -33,7 +33,7 @@ public class CoinDiceRoller : MonoBehaviour {
                     rollResultText.text = "tails";
                 }  
                 break;
-            case "3":
+            case "4":
                 result = Random.Range(1, 4);
                 rollResultText.text = result.ToString();
                 break;
