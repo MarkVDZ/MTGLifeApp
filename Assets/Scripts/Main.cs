@@ -27,12 +27,11 @@ public class Main : MonoBehaviour {
         PlayerData data = new PlayerData();
         players.Add(data);
         data.playerName = "Player " + players.Count;
-        //players.Add(new PlayerData());
         GameObject newButton = GameObject.Instantiate(prefab);
         newButton.transform.SetParent(contentPanel);
 
         PlayerButton playerButton = newButton.GetComponent<PlayerButton>();
-        playerButton.Setup(data);
+        playerButton.Setup(data, this);
 
         //old stuff
         //Player newPlayer = new Player();
@@ -45,8 +44,18 @@ public class Main : MonoBehaviour {
         //print(newButton.GetComponent<Player>().name);
     }
 
-    public void RemovePlayer()
+    public void RemovePlayer(PlayerData playerToRemove)
     {
-
+        for(int i = players.Count - 1; i >= 0; i--)
+        {
+            print("IN the loop");
+            if (players[i] == playerToRemove)
+            {
+                print("Attempt to remove button");
+                players.RemoveAt(i);
+                
+            }
+        }
+       
     }
 }
