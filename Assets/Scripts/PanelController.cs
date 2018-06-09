@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ManaPanelController : MonoBehaviour, IPointerClickHandler {
+public class PanelController : MonoBehaviour, IPointerClickHandler
+{
 
-    public GameObject manaPanel;
+    public GameObject extraMenu;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+       
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,6 +21,7 @@ public class ManaPanelController : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        manaPanel.SetActive(!manaPanel.activeSelf);
+        extraMenu.SetActive(!extraMenu.activeSelf);
     }
+
 }

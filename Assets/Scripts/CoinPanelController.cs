@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ManaPanelController : MonoBehaviour, IPointerClickHandler {
+public class CoinPanelController : MonoBehaviour, IPointerClickHandler
+{
 
-    public GameObject manaPanel;
+    public GameObject coinPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,6 @@ public class ManaPanelController : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        manaPanel.SetActive(!manaPanel.activeSelf);
+        coinPanel.SetActive(!coinPanel.activeSelf);
     }
 }
