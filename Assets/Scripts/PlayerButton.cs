@@ -27,6 +27,7 @@ public class PlayerButton : MonoBehaviour {
     {
         //FindObjectOfType<Main>().RemovePlayer(data);
         main.RemovePlayer(data);
+        Destroy(this.gameObject);
         print("Called remove on button click");
     }
 

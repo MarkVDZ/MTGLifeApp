@@ -13,10 +13,6 @@ public class LifeCounter : MonoBehaviour {
 		lifeText.text = life.ToString();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void UpdateLifeTotal()
     {

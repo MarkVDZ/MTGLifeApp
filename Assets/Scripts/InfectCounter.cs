@@ -12,21 +12,50 @@ public class InfectCounter : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    public void InfectUp()
+    private void UpdateInfectTotal()
     {
-        infect++;
         infectTotal.text = infect.ToString();
     }
 
-    public void InfectDown()
+
+    public void InfectUp(int amount)
     {
-        infect--;
-        infectTotal.text = infect.ToString();
+        switch (amount)
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                infect++;
+                break;
+
+            case 5:
+                infect += 5;
+                break;
+
+        }
+        UpdateInfectTotal();
+    }
+
+    public void InfectDown(int amount)
+    {
+        switch (amount)
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                infect--;
+                break;
+
+            case 5:
+                infect -= 5;
+                break;
+
+        }
+        UpdateInfectTotal();
     }
 }
